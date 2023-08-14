@@ -5,6 +5,7 @@ Every chapter from every book form an many translations as possible wll be hased
 Nobody will be able to counterfiet a single letter in the Bible
 
 Hash of every chapter in Genesis New International Version (NIV):
+
 0a40aeb7837aecdc038f7f968d5a4325f1ca2772dd664ba386ac0796577e2cac
 e0693e2c351854c6387d08197832c0209f5c5e2f9fb5c27d60de260b9af5d651
 b90b5e1a68780994db73aca13a28b5872b5fdb72ce9ab3b7981d5690633e1302
