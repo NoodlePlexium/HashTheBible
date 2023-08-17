@@ -3,7 +3,7 @@ A project focused on preserving the original Bible text cryptographically, prote
 
 Every chapter from every book form an many translations as possible wll be hased using SHA256. These hashes will be stored on the Ethereum blockchain using smart contracts.
 Nobody will be able to counterfiet a single letter in the Bible
-
+<br />
 
 
 ## NIV BIBLE HASH
@@ -11,7 +11,7 @@ Nobody will be able to counterfiet a single letter in the Bible
 
 ## ALL NIV CHAPTER HASHES
 https://github.com/NoodlePlexium/HashTheBible/blob/main/NIV-HASHES.txt
-
+<br />
 
 ## HASHING AND FORMATTING RULES:
 - no headers
@@ -30,7 +30,7 @@ https://github.com/NoodlePlexium/HashTheBible/blob/main/NIV-HASHES.txt
 - 10 remove spaces before ” ) ’ ! ? , . ; : —
 - 11 remove spaces after “ ( —
 - 12 remove spaces between numbers
-
+<br />
 
 
 ## BLOCKCHAIN STORAGE COST ESTIMATE
