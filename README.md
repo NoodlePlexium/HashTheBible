@@ -7,7 +7,7 @@ Nobody will be able to counterfiet a single letter in the Bible
 
 
 ## NIV BIBLE HASH
-### eb2d16cf74478a1104660ba3db69fad493625d848cbbb459780244b3018187f4
+eb2d16cf74478a1104660ba3db69fad493625d848cbbb459780244b3018187f4
 
 ## ALL NIV CHAPTER HASHES
 https://github.com/NoodlePlexium/HashTheBible/blob/main/NIV-HASHES.txt
