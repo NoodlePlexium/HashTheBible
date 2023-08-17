@@ -14,8 +14,9 @@ https://github.com/NoodlePlexium/HashTheBible/blob/main/NIV-HASHES.txt
 
 
 ## HASHING AND FORMATTING RULES:
-- No Verse numbers:
-- No verse numbers:
+- no headers
+- no verse numbers
+<br />
 
 - 1 remove line spacing
 - 2 capitalize all
