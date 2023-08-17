@@ -11,128 +11,214 @@ def replace_character_at_index(input_string, index, new_character):
     return input_string[:index] + new_character + input_string[index + 1:]
 
 def remove_footnotes(input_string):
+    result = []
     i = 0
-    removeMode = False
-    
+
     while i < len(input_string):
+        if input_string[i] == "[":
+            while i < len(input_string) and input_string[i] != "]":
+                i += 1
+        else:
+            result.append(input_string[i])
+        i += 1
 
-        i+=1
-
-        if (i == len(input_string)): break
-        if (input_string[i] == "["): removeMode = True
-        if (input_string[i] == "]"): removeMode = False
-
-        if (removeMode or input_string[i] == "]"):
-            input_string = remove_character_at_index(input_string, i)
-            i-=1
-
-    return input_string
+    return ''.join(result)
 
 def capitalize_all(input_string):
-    capitalized_string = ""
-    for i in range(len(input_string)):
-        capitalized_string += input_string[i].upper()
-    return capitalized_string
+    return input_string.upper()
  
 
-def whitelist_symbols(input_string, whitelisted):
-    cleaned_string = ""
-
-    i=0
-    while i < len(input_string):
-        char = input_string[i]
-        
-        if char.isalnum() or char == " ":
-            cleaned_string += char
-        else:
-            for j in range(len(whitelisted))  :
-                if char == whitelisted[j]:
-                    cleaned_string += char
-
-        i += 1                
-
-    return cleaned_string 
+def whitelist_characters(input_string, whitelisted):
+    cleaned_chars = [char for char in input_string if char in whitelisted]
+    return ''.join(cleaned_chars)
 
 
 
 
 def remove_spaces_before(input_string, chars):
-    cleaned_string = ""
+
+    cleaned_chars = []
 
     i=0
     while i < len(input_string) - 1:
         char = input_string[i]
         nextChar = input_string[i+1]
         
-        added = False
-        for j in range(len(chars)):
+        if not (char == " " and nextChar in chars):
+            cleaned_chars.append(char)
 
-            if nextChar == chars[j]:
-                if char == " ":
-                   added = True
-                else:
-                    cleaned_string += char
-                    added = True
+        i += 1     
 
-        if not added:
-            cleaned_string += char    
+    cleaned_chars.append(input_string[len(input_string)-1])              
+    return ''.join(cleaned_chars)
 
 
-        i += 1                
+def remove_spaces_after(input_string, chars):
+    cleaned_chars = []
 
-    return cleaned_string 
+    cleaned_chars.append(input_string[0])
+
+    i=1
+    while i < len(input_string) - 1:
+        char = input_string[i]
+        lastChar = input_string[i+-1]
+        
+        if not (char == " " and lastChar in chars):
+            cleaned_chars.append(char)
+
+        i += 1     
+
+    cleaned_chars.append (input_string[len(input_string)-1])          
+    return ''.join(cleaned_chars)
+
+
+def remove_spaces_between_numbers(input_string):
+
+    # include first character 
+    cleaned_chars = []
+    cleaned_chars.append(input_string[0])
+
+    i=1
+    while i < len(input_string) -1:
+        lastChar = input_string[i-1]
+        char = input_string[i]
+        nextChar = input_string[i+1]
+
+        if not (lastChar.isnumeric() and nextChar.isnumeric() and char == " "):
+            cleaned_chars.append(char)
+
+        i += 1   
+
+    # include last character 
+    cleaned_chars.append (input_string[len(input_string)-1])              
+    return ''.join(cleaned_chars)
 
 
 
 
 def remove_space_duplicates(input_string, spaceChar):
-    wasAlphaNumeric = False
-    cleaned_string = ""
-
-    i=0
-    while i < len(input_string):
-        char = input_string[i]
-
+    cleaned_chars = []
+    for char in input_string:
         if char != spaceChar:
-            wasAlphaNumeric = True
-            cleaned_string += char
-        else:
-            if wasAlphaNumeric:
-                cleaned_string += char
-                wasAlphaNumeric = False
-
-        i += 1
-
-    # last character cannot be a space
-    if (cleaned_string[len(cleaned_string)-1]==spaceChar):
-        cleaned_string = cleaned_string[:-1]    
-
-    return cleaned_string
-
-
+            cleaned_chars.append(char)
+        elif cleaned_chars and cleaned_chars[-1] != spaceChar:
+            cleaned_chars.append(char)
+    if cleaned_chars and cleaned_chars[-1] == spaceChar:
+        cleaned_chars.pop()
+    return ''.join(cleaned_chars)
 
 
 def insert_spaces_between_numbers_and_words(input_string):
 
-    cleaned_string = ""
-    wasANumber = False
+    cleaned_chars = []
 
     i=0
-    while i < len(input_string):
+    while i < len(input_string) -1:
+
         char = input_string[i]
+        nextChar = input_string[i+1]
 
-        if char.isnumeric():
-            wasANumber = True
-            cleaned_string += char
+        cleaned_chars.append(char)
 
-        else:
-            if wasANumber and char != " ":
-                # insert space
-                cleaned_string+= " "
+        if (char.isnumeric() and nextChar.isalpha() or char.isalpha() and nextChar.isnumeric()):
+            cleaned_chars.append(" ")
 
-            cleaned_string += char
-            wasANumber = False    
 
         i += 1
 
-    return cleaned_string
+    # append last char
+    cleaned_chars.append(input_string[len(input_string)-1])    
+
+    return ''.join(cleaned_chars)
+
+
+
+def insert_spaces_before(input_string, chars):
+    
+    cleaned_chars = []
+
+    i=0
+    while i < len(input_string) - 1:
+        char = input_string[i]
+        nextChar = input_string[i+1]
+        
+        cleaned_chars.append(char)
+
+        if char != " " and nextChar in chars:
+            cleaned_chars.append(" ")
+
+        i += 1     
+
+    cleaned_chars.append(input_string[len(input_string)-1])              
+    return ''.join(cleaned_chars)
+
+
+
+def insert_spaces_after(input_string, chars):
+    
+    cleaned_chars = []
+
+    i=0
+    while i < len(input_string) - 1:
+        char = input_string[i]
+        nextChar = input_string[i+1]
+        
+        cleaned_chars.append(char)
+
+        if char in chars and nextChar != " ":
+            cleaned_chars.append(" ")
+
+        i += 1     
+
+    cleaned_chars.append(input_string[len(input_string)-1])              
+    return ''.join(cleaned_chars)
+
+
+def remove_verse_numbers(input_text):
+    output_text = ""
+    current_verse = 0
+    i = 0
+    
+    while i < len(input_text):
+        if input_text[i].isdigit():
+            verse_number = ""
+            while i < len(input_text) and input_text[i].isdigit():
+                verse_number += input_text[i]
+                i += 1
+            verse_number = int(verse_number)
+            
+            if verse_number == current_verse + 1:
+                while i < len(input_text) and input_text[i].isdigit():
+                    i += 1
+                current_verse = verse_number
+            else:
+                output_text += str(verse_number)
+        else:
+            output_text += input_text[i]
+            i += 1
+    
+    return output_text
+
+
+def format_numbers_with_commas(input_string):
+
+    cleaned_chars = []
+
+    cleaned_chars.append(input_string[0])
+
+    i=1
+    while i < len(input_string) - 1:
+        
+        char = input_string[i]
+        nextChar = input_string[i+1]
+        lastChar = input_string[i+-1]
+        
+        if not(lastChar.isnumeric() and char == "," and nextChar.isnumeric()):
+            cleaned_chars.append(char)
+
+
+        i += 1  
+
+    cleaned_chars.append(input_string[len(input_string)-1])                   
+    return ''.join(cleaned_chars)
+
