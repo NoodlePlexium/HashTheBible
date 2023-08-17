@@ -4,6 +4,8 @@ A project focused on preserving the original Bible text cryptographically, prote
 Every chapter from every book form an many translations as possible wll be hased using SHA256. These hashes will be stored on the Ethereum blockchain using smart contracts.
 Nobody will be able to counterfiet a single letter in the Bible
 
+
+
 ## NIV BIBLE HASH:
 ## eb2d16cf74478a1104660ba3db69fad493625d848cbbb459780244b3018187f4
 
