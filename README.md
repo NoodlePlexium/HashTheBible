@@ -6,14 +6,14 @@ Nobody will be able to counterfiet a single letter in the Bible
 
 
 
-## NIV BIBLE HASH:
+### NIV BIBLE HASH:
 ### eb2d16cf74478a1104660ba3db69fad493625d848cbbb459780244b3018187f4
 
-## EVERY CHAPTER HASHED:
+### EVERY CHAPTER HASHED:
 https://github.com/NoodlePlexium/HashTheBible/blob/main/NIV-HASHES.txt
 
 
-## HASHING AND FORMATTING RULES:
+### HASHING AND FORMATTING RULES:
 No headers
 No verse numbers
 
@@ -31,7 +31,7 @@ No verse numbers
 12 - remove spaces between numbers
 
 
-## BLOCKCHAIN STORAGE COST ESTIMATE
+### BLOCKCHAIN STORAGE COST ESTIMATE
 The cost of storing 50 hashes as of 2023/08/14 is $33.21
 
 gas price = 18
