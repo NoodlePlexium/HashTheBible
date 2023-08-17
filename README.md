@@ -14,8 +14,8 @@ https://github.com/NoodlePlexium/HashTheBible/blob/main/NIV-HASHES.txt
 
 
 ## HASHING AND FORMATTING RULES:
-- No headers
-  - No verse numbers
+- No Verse numbers: - No headers
+- No verse numbers
 
 - 1 remove line spacing
 - 2 capitalize all
@@ -29,6 +29,7 @@ https://github.com/NoodlePlexium/HashTheBible/blob/main/NIV-HASHES.txt
 - 10 remove spaces before ” ) ’ ! ? , . ; : —
 - 11 remove spaces after “ ( —
 - 12 remove spaces between numbers
+
 
 
 ## BLOCKCHAIN STORAGE COST ESTIMATE
