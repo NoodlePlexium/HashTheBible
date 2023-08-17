@@ -39,4 +39,5 @@ gas price = 18
 data = 256 bits * 50 
 gwei cost = 1mil
 Eth cost = 18 * 1mil / 1,000,000,000 = 0.018 Eth
-Dollar cost = 0.018 * 1845 = $33.21
+Dollar cost = 0.018 * 1845 
+### = $33.21
