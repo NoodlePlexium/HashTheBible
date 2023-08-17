@@ -17,11 +17,11 @@ https://github.com/NoodlePlexium/HashTheBible/blob/main/NIV-HASHES.txt
 No headers
 No verse numbers
 
-+ 1 remove line spacing
-+ 2 capitalize all
-+ 3 whitelist characters  .,”“!?;:’()— ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789
-+ 4 remove space duplicates
-+ 5 insert spaces between numbers and letters
+- 1 remove line spacing
+- 2 capitalize all
+- 3 whitelist characters  .,”“!?;:’()— ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789
+- 4 remove space duplicates
+- 5 insert spaces between numbers and letters
 - 6 format numbers with commas
 - 7 remove space duplicates
 - 8 insert spaces after , . ! ? ) ” ; :
