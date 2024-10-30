@@ -1,5 +1,5 @@
 # HashTheBible
-A project focused on preserving the original Bible text cryptographically, protecting it from false teachings and false edits.
+A project focused on preserving the original Bible text cryptographically, validating the true Biblical text.
 
 Every chapter from every book from an many translations as possible wll be hased using SHA256. These hashes will be stored on the Ethereum blockchain using smart contracts.
 Nobody will be able to counterfiet a single letter in the Bible
