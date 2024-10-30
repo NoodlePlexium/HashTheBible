@@ -32,14 +32,3 @@ NO VERSE NUMBERS <br />
 - 12 remove spaces between numbers
 <br />
 
-
-## BLOCKCHAIN STORAGE COST ESTIMATE
-The cost of storing 50 hashes as of 2023/08/14 is $33.21
-
-gas price = 18
-256 bits costs 20000 gwei
-data = 256 bits * 50 
-gwei cost = 1mil
-Eth cost = 18 * 1mil / 1,000,000,000 = 0.018 Eth
-Dollar cost = 0.018 * 1845 
-### = $33.21
